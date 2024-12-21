@@ -74,7 +74,7 @@ if __name__ == "__main__":
     hidden_layers = [10, 10]  # 2つの中間層（それぞれ10ノード）
 
     # AIインスタンスを作成
-    ai = AI(input_nodes, output_nodes, hidden_layers)
+    ai = Tensor_AI_Class(input_nodes, output_nodes, hidden_layers)
 
     # 仮想的な状態を作成（4次元の入力）
     state = np.random.rand(1, input_nodes).astype(np.float32)
