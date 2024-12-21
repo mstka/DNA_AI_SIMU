@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-class AI:
+class Tensor_AI_Class:
     def __init__(self, input_nodes, output_nodes, hidden_layers):
         """
         入力ノード数、出力ノード数、中間層の層数とノード数をリストで指定してモデルを構築。
@@ -31,7 +31,7 @@ class AI:
         
         # 隠れ層
         for nodes in self.hidden_layers:
-            model.add(tf.keras.layers.Dense(nodes, activation='relu'))
+            model.add(tf.keras.layers.Dense(nodes, activation='sigmoid'))
         
         # 出力層
         model.add(tf.keras.layers.Dense(self.output_nodes, activation='linear'))
